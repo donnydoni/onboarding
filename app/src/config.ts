@@ -16,7 +16,7 @@ export default defineConfig({
           pagination: 'count',
           title: 'Welcome to ellemments TOKYO!',
           description:
-            "Keyingi tugmasini bosish orqali tanishishingiz mumkin.",
+            "Got to the next slide by pressing Next button or view Catalog",
           button: 'Next',
         },
 
