@@ -16,8 +16,8 @@ export default defineConfig({
           pagination: 'count',
           title: 'Welcome to ellemments TOKYO!',
           description:
-            "Got to the next slide by pressing Next button or view Catalog",
-          button: 'Next',
+            "ellemments",
+          button: 'Keyingi',
         },
 
         // list
@@ -58,7 +58,7 @@ export default defineConfig({
               text: 'Some extremely cool feature',
             },
           ],
-          button: 'Next',
+          button: 'Keyingi',
         },
         // slide with other features
         {
@@ -78,9 +78,8 @@ export default defineConfig({
             'Content pre-loading for high speed',
             '<b>Low-code</b> approach to building onboardings',
             'Many examples/presets',
-            "And many more... (see <a href='https://github.com/Easterok/telegram-onboarding-kit' target='_blank'>GitHub</a>)",
           ],
-          button: 'Next',
+          button: 'Keyingi',
         },
 
         // go to paywall slide

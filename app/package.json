@@ -11,7 +11,8 @@
         "vue-router": "^4.2.5"
     },
     "devDependencies": {
+        "@tok/eslint-config": "*",
         "@tok/tsconfig": "*",
-        "@tok/eslint-config": "*"
+        "@types/node-telegram-bot-api": "^0.64.6"
     }
 }
