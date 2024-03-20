@@ -96,7 +96,7 @@ export default defineConfig({
           title: 'But onboarding slides are not enough...',
           description: "Let's discover ellemments",
           button: {
-            content: 'Go to Paywall',
+            content: 'Start Shopping',
             to: '/paywall',
           },
         },
