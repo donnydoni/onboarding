@@ -28,8 +28,11 @@ export default defineConfig({
             type: 'image',
             src: import('./assets/img/uniqlo.jpg'),
           },
+          shape: 'rounded',
+          pagination: 'count',
           extends: 'default',
           title: 'ellemments Website',
+
           button: [
             [
               {
