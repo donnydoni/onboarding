@@ -51,8 +51,9 @@ export default defineConfig({
           extends: 'default',
           title: 'ellemments Website',
           button: {
-            onClick: () => {
-              window.open('https://ellemments.com/');
+            text: 'View Website',
+            web_app: {
+              url: 'https://ellemments.com/',
             },
           },
         },
