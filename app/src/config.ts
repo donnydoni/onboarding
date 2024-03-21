@@ -4,9 +4,7 @@ export default defineConfig({
   pages: [
     {
       slides: [
-        // intro
         {
-          extends: 'default',
           media: {
             type: 'image',
             src: import('./assets/img/uniqlo.jpg'),
@@ -47,10 +45,16 @@ export default defineConfig({
             '<b>Low-code</b> approach to building onboardings',
             'Many examples/presets',
           ],
+          button: 'Website',
+        },
+        {
+          extends: 'default',
+          title: 'ellemments Website',
           button: {
             text: 'Open Website',
-            url: 'https://ellemments.com/',
-            target: '_self',
+            onClick: () => {
+              window.open('https://ellemments.com/');
+            },
           },
         },
       ],
