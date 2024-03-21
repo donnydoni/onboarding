@@ -4,6 +4,7 @@ export default defineConfig({
   pages: [
     {
       slides: [
+        // intro
         {
           extends: 'default',
           media: {
@@ -47,19 +48,9 @@ export default defineConfig({
             'Many examples/presets',
           ],
           button: {
-            text: 'View Website',
-            reply_markup: {
-              keyboard: [
-                [
-                  {
-                    text: 'Open Website',
-                    web_app: {
-                      url: 'https://ellemments.com/',
-                    },
-                  },
-                ],
-              ],
-            },
+            text: 'Open Website',
+            url: 'https://ellemments.com/',
+            target: '_self',
           },
         },
       ],
