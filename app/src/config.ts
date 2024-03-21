@@ -54,12 +54,16 @@ export default defineConfig({
           },
           extends: 'default',
           title: 'ellemments Website',
-          button: {
-            text: 'Open Website',
-            onClick: () => {
-              window.open('https://ellemments.com/');
-            },
-          },
+          button: [
+            [
+              {
+                text: "View Store",
+                web_app: {
+                  url: "https://ellemments.com/"
+                }
+              }
+            ]
+          ]
         },
       ],
     },
