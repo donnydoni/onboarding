@@ -4,49 +4,57 @@ export default defineConfig({
   pages: [
     {
       slides: [
+        // intro
         {
           media: {
-            type: 'image',
-            src: import('./assets/img/uniqlo.jpg'),
+            type: 'sticker',
+            src: import('./assets/stickers/fish_hello.tgs'),
+            size: 200,
           },
-          shape: 'rounded',
+          shape: 'square',
           pagination: 'count',
-          title: 'Welcome to ellemments TOKYO!',
-          description: "ellemments",
-          list: [
+          title: 'MyVPN – the best VPN in Telegram',
+          description: "Get access to all the content you love, no matter where you are",
+          button: 'Next',
+        },
+
+        // form
+        {
+          extends: 'form',
+          media: {
+            type: 'sticker',
+            src: import('./assets/stickers/fish_love.tgs'),
+            size: 150,
+          },
+          shape: 'square',
+          pagination: 'count',
+          title: 'Why use a VPN?',
+          description: '',
+          form: [
             {
-              media: {
-                type: 'icon',
-                src: import('./assets/icons/guide.svg'),
-                size: 30,
-              },
-              text: 'Some cool feature',
+              id: 'privacy',
+              placeholder: 'Protect your privacy',
+              type: 'checkbox',
             },
             {
-              media: {
-                type: 'icon',
-                src: import('./assets/icons/track.svg'),
-                size: 30,
-              },
-              text: 'Some very cool feature',
+              id: 'access_blocked_content',
+              placeholder: 'Access blocked content',
+              type: 'checkbox',
             },
             {
-              media: {
-                type: 'icon',
-                src: import('./assets/icons/time.svg'),
-                size: 30,
-              },
-              text: 'Some extremely cool feature',
+              id: 'find_better_deals',
+              placeholder: 'Find better deals in online shopping',
+              type: 'checkbox',
             },
-            'One-click 0$ <b>deploy</b> on GitHub Pages',
-            'Language and currency localization',
-            'Buttons with <b>haptic</b> feedback',
-            'Content pre-loading for high speed',
-            '<b>Low-code</b> approach to building onboardings',
-            'Many examples/presets',
+            {
+              id: 'other',
+              placeholder: 'Other',
+              type: 'checkbox',
+            },
           ],
           button: 'Next',
         },
+
         // image
         {
           media: {
@@ -60,8 +68,63 @@ export default defineConfig({
           description: "We have more than <b>1 million</b> users",
           button: {
             content: 'Next',
-            to: 'https://ellemments.com/',
+            to: '/paywall',
           },
+        },
+      ],
+    },
+
+    // paywall
+    {
+      extends: 'paywall',
+      path: '/paywall',
+      media: {
+        type: 'sticker',
+        src: import('./assets/stickers/lock.tgs'),
+        size: 150,
+      },
+      shape: 'square',
+      title: 'Unlock access to all features',
+      list: [
+        'Unlimited traffic',
+        'Any number of devices',
+        'No ads',
+      ],
+      products: [
+        {
+          id: '1_month_subscription',
+          title: '1 month subscription',
+          description: '2$/month',
+          discount: '',
+          price: 2,
+        },
+        {
+          id: '1_year_subscription',
+          title: '1 year subscription',
+          description: '1$/month',
+          discount: 'Discount 50%',
+          price: 12,
+        },
+        {
+          id: 'lifetime_access',
+          title: 'Lifetime access',
+          description: '20$ once',
+          discount: 'Best offer',
+          price: 20,
+        },
+      ],
+      mainButtonText: 'Buy for {price}',
+      popup: {  // popup for payment methods choice
+        type: 'web',
+      },
+      links: [
+        {
+          text: 'Privacy policy',
+          href: 'https://google.com',
+        },
+        {
+          text: 'Terms of use',
+          href: 'https://google.com',
         },
       ],
     },
