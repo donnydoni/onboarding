@@ -52,9 +52,8 @@ export default defineConfig({
           title: 'ellemments Website',
           button: {
             text: 'View Website',
-            web_app: {
-              url: 'https://ellemments.com/',
-            },
+            url: 'https://ellemments.com/',
+            target: '_self',
           },
         },
       ],
