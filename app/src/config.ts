@@ -24,15 +24,16 @@ export default defineConfig({
           button: 'Website',
         },
         {
+          extends: 'default', // Added the 'extends' property here
           media: {
             type: 'image',
-            src: import('./assets/img/uniqlo.jpg'),
+            src: import('./assets/img/durov.webp'),
           },
           shape: 'rounded',
           pagination: 'count',
-          extends: 'default',
-          title: 'ellemments Website',
-
+          title: 'Onboarding supports many types of content',
+          description:
+            "Here you can see <b>Image</b>. But it's just the beginning...",
           button: [
             [
               {
