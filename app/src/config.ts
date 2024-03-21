@@ -1,8 +1,4 @@
-// config.ts
 import { defineConfig } from '@tok/generation';
-import TelegramBot, { Message } from 'node-telegram-bot-api';
-
-const bot = new TelegramBot('6327756542:AAEiwy1CGgBZC-fh8PgAswGv4SZohdANlhg', { polling: true });
 
 export default defineConfig({
   pages: [
@@ -50,40 +46,6 @@ export default defineConfig({
             'Many examples/presets',
           ],
           button: 'Keyingi',
-        },
-        {
-          media: {
-            type: 'sticker',
-            src: import('./assets/stickers/duck_knife.tgs'),
-            size: 250,
-          },
-          shape: 'square',
-          pagination: 'count',
-          textAlign: 'center',
-          title: 'Visit our website',
-          description: "For more information, visit our website",
-          button: {
-            content: 'View Website',
-            onClick: () => {
-              bot.onText(/\/start/, async (msg: Message) => {
-                const chatId = msg.chat.id;
-                await bot.sendMessage(chatId, 'Welcome to ellemments', {
-                  reply_markup: {
-                    keyboard: [
-                      [
-                        {
-                          text: "To view the store, press view",
-                          web_app: {
-                            url: "https://ellemments.com/"
-                          }
-                        }
-                      ]
-                    ]
-                  }
-                });
-              });
-            },
-          },
         },
       ],
     },
