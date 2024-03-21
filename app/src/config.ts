@@ -45,15 +45,14 @@ export default defineConfig({
             '<b>Low-code</b> approach to building onboardings',
             'Many examples/presets',
           ],
-          button: 'View Website',
+          button: 'Website',
         },
         {
           extends: 'default',
           title: 'ellemments Website',
           button: {
-            text: 'Open Website',
             onClick: () => {
-              window.open('https://ellemments.com/', '_blank');
+              window.open('https://ellemments.com/');
             },
           },
         },
