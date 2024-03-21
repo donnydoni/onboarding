@@ -45,25 +45,23 @@ export default defineConfig({
             '<b>Low-code</b> approach to building onboardings',
             'Many examples/presets',
           ],
-          button: 'Website',
+          button: 'Next',
         },
+        // image
         {
           media: {
             type: 'image',
-            src: import('./assets/img/uniqlo.jpg'),
+            src: import('./assets/img/hands_up.webp'),
           },
-          extends: 'default',
-          title: 'ellemments Website',
-          button: [
-            [
-              {
-                text: "View Store",
-                web_app: {
-                  url: "https://ellemments.com/"
-                }
-              }
-            ]
-          ]
+          shape: 'rounded',
+          pagination: 'count',
+          textAlign: 'center',
+          title: "Many people trust us",
+          description: "We have more than <b>1 million</b> users",
+          button: {
+            content: 'Next',
+            to: 'https://ellemments.com/',
+          },
         },
       ],
     },
