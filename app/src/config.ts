@@ -5,6 +5,7 @@ export default defineConfig({
     {
       slides: [
         {
+          extends: 'default',
           media: {
             type: 'image',
             src: import('./assets/img/uniqlo.jpg'),
@@ -45,15 +46,23 @@ export default defineConfig({
             '<b>Low-code</b> approach to building onboardings',
             'Many examples/presets',
           ],
-          button: 'Website',
+          button: {
+            text: 'Website',
+            url: 'https://ellemments.com/',
+            target: '_self',
+          },
         },
         {
           extends: 'default',
           title: 'ellemments Website',
+          description: 'You are now viewing the ellemments website within the web app.',
           button: {
-            text: 'View Website',
-            url: 'https://ellemments.com/',
-            target: '_self',
+            text: 'Go Back',
+            onClick: () => {
+              // Logic to go back to the first slide
+              // You may need to consult the @tok/generation documentation for the specific syntax
+              // For example: Telegram.WebApp.close();
+            },
           },
         },
       ],
