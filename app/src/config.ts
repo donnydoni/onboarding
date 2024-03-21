@@ -45,7 +45,22 @@ export default defineConfig({
             '<b>Low-code</b> approach to building onboardings',
             'Many examples/presets',
           ],
-          button: 'Keyingi',
+          button: 'View Website',
+        },
+        {
+          extends: 'default',
+          media: {
+            type: 'image',
+            src: import('./assets/img/placeholder.jpg'),
+          },
+          title: 'Visit ellemments Website',
+          description: 'Explore our website inside the slide.',
+          button: {
+            text: 'Open Website',
+            onClick: () => {
+              window.open('https://ellemments.com/', '_blank');
+            },
+          },
         },
       ],
     },
