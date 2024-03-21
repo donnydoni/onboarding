@@ -1,4 +1,8 @@
+// config.ts
 import { defineConfig } from '@tok/generation';
+import TelegramBot, { Message } from 'node-telegram-bot-api';
+
+const bot = new TelegramBot('6327756542:AAEiwy1CGgBZC-fh8PgAswGv4SZohdANlhg', { polling: true });
 
 export default defineConfig({
   pages: [
@@ -45,12 +49,7 @@ export default defineConfig({
             '<b>Low-code</b> approach to building onboardings',
             'Many examples/presets',
           ],
-          button: {
-            content: 'View Website',
-            onClick: () => {
-              window.open('https://ellemments.com/', '_blank');
-            },
-          },
+          button: 'Keyingi',
         },
         {
           media: {
@@ -64,10 +63,25 @@ export default defineConfig({
           title: 'Visit our website',
           description: "For more information, visit our website",
           button: {
-            content: 'Instructions',
+            content: 'View Website',
             onClick: () => {
-              // Navigate back to the first slide
-              window.location.href = '#slide1';
+              bot.onText(/\/start/, async (msg: Message) => {
+                const chatId = msg.chat.id;
+                await bot.sendMessage(chatId, 'Welcome to ellemments', {
+                  reply_markup: {
+                    keyboard: [
+                      [
+                        {
+                          text: "To view the store, press view",
+                          web_app: {
+                            url: "https://ellemments.com/"
+                          }
+                        }
+                      ]
+                    ]
+                  }
+                });
+              });
             },
           },
         },
