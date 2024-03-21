@@ -1,12 +1,9 @@
 import { defineConfig } from '@tok/generation';
 
 export default defineConfig({
-  // If you want to add language/currency localization – see ./examples/meditation as reference
-
   pages: [
     {
       slides: [
-        // image
         {
           media: {
             type: 'image',
@@ -15,23 +12,7 @@ export default defineConfig({
           shape: 'rounded',
           pagination: 'count',
           title: 'Welcome to ellemments TOKYO!',
-          description:
-            "ellemments",
-          button: 'Keyingi',
-        },
-
-        // list
-        {
-          media: {
-            type: 'sticker',
-            src: import('./assets/stickers/duck_juggling.tgs'),
-            size: 150,
-          },
-          shape: 'square',
-          pagination: 'count',
-          title: 'Lists',
-          description:
-            'Lists can be used to showcase <b>features</b> of your product. Items support customizable icons',
+          description: "ellemments",
           list: [
             {
               media: {
@@ -57,21 +38,6 @@ export default defineConfig({
               },
               text: 'Some extremely cool feature',
             },
-          ],
-          button: 'Keyingi',
-        },
-        // slide with other features
-        {
-          media: {
-            type: 'sticker',
-            src: import('./assets/stickers/duck_cool.tgs'),
-            size: 150,
-          },
-          shape: 'square',
-          pagination: 'count',
-          title: 'Some other features:',
-          description: '',
-          list: [
             'One-click 0$ <b>deploy</b> on GitHub Pages',
             'Language and currency localization',
             'Buttons with <b>haptic</b> feedback',
@@ -79,10 +45,13 @@ export default defineConfig({
             '<b>Low-code</b> approach to building onboardings',
             'Many examples/presets',
           ],
-          button: 'Keyingi',
+          button: {
+            content: 'View Website',
+            onClick: () => {
+              window.open('https://ellemments.com/', '_blank');
+            },
+          },
         },
-
-        // go to paywall slide
         {
           media: {
             type: 'sticker',
@@ -92,11 +61,14 @@ export default defineConfig({
           shape: 'square',
           pagination: 'count',
           textAlign: 'center',
-          title: 'But onboarding slides are not enough...',
-          description: "Let's discover ellemments",
+          title: 'Visit our website',
+          description: "For more information, visit our website",
           button: {
-            content: 'Start Shopping',
-            to: '/paywall',
+            content: 'Instructions',
+            onClick: () => {
+              // Navigate back to the first slide
+              window.location.href = '#slide1';
+            },
           },
         },
       ],
