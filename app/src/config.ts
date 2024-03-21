@@ -48,6 +48,10 @@ export default defineConfig({
           button: 'Website',
         },
         {
+          media: {
+            type: 'image',
+            src: import('./assets/img/uniqlo.jpg'),
+          },
           extends: 'default',
           title: 'ellemments Website',
           button: {
