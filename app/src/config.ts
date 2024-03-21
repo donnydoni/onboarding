@@ -49,12 +49,7 @@ export default defineConfig({
         },
         {
           extends: 'default',
-          media: {
-            type: 'image',
-            src: import('./assets/img/placeholder.jpg'),
-          },
-          title: 'Visit ellemments Website',
-          description: 'Explore our website inside the slide.',
+          title: 'ellemments Website',
           button: {
             text: 'Open Website',
             onClick: () => {
